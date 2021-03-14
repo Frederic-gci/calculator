@@ -1,7 +1,8 @@
 name: test S3 deploy
 on: 
   push:
-    branches: [mastergit]
+    branches: [master]
+    worflow_dispatch:
 
 jobs:
   build:
@@ -26,8 +27,8 @@ jobs:
       uses: reggionick/s3-deploy@v3
       with:
         folder: build
-        bucket: ${{ secrets.S3_BUCKET }}
-        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        bucket: 'test-cd-calculator'
+        bucket-region: 'ca-central-1'
         delete-removed: true
         no-cache: true
         private: true
