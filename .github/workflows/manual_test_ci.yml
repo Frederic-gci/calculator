@@ -1,4 +1,4 @@
-name: test S3 deploy
+name: manual S3 deploy
 on: 
   workflow_dispatch:
 

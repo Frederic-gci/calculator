@@ -1,7 +1,7 @@
 name: test S3 deploy
 on: 
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
